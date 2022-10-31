@@ -1,0 +1,107 @@
+.typography {
+  &.h1,
+  &.h2,
+  &.h3,
+  &.h4 {
+    font-family: "Alice", sans-serif;
+    font-weight: 400;
+    line-height: 120%;
+    color: var(--clr-default-600);
+
+    &.gradient {
+      -webkit-text-fill-color: transparent;
+      background-image: linear-gradient(
+        270.26deg,
+        #3d3a34 37.04%,
+        #3d3a34 78.49%,
+        rgba(61, 58, 52, 0) 109.51%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+
+  &.h1 {
+    font-size: fluid(4.8rem, 2.8rem);
+
+    span {
+      color: var(--clr-secondary-400);
+    }
+
+    &.gradient {
+      span {
+        -webkit-text-fill-color: var(--clr-secondary-400);
+      }
+    }
+  }
+
+  &.h2 {
+    font-size: fluid(3.6rem, 2.4rem);
+
+    span {
+      color: var(--clr-secondary-400);
+    }
+
+    &.gradient {
+      span {
+        -webkit-text-fill-color: var(--clr-secondary-400);
+      }
+    }
+  }
+
+  &.h3 {
+    font-size: fluid(2.8rem, 2rem);
+
+    span {
+      color: var(--clr-primary-400);
+    }
+
+    &.gradient {
+      span {
+        -webkit-text-fill-color: var(--clr-primary-400);
+      }
+    }
+  }
+
+  &.h4 {
+    font-size: fluid(2.4rem, 2rem);
+
+    span {
+      color: var(--clr-primary-400);
+    }
+
+    &.gradient {
+      span {
+        -webkit-text-fill-color: var(--clr-primary-400);
+      }
+    }
+  }
+
+  &.body {
+    line-height: 160%;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.w-500 {
+    font-weight: 500;
+  }
+
+  &.text {
+    color: var(--clr-default-400);
+  }
+
+  &.main {
+    color: var(--clr-default-800);
+  }
+
+  &.error {
+    color: var(--clr-status-error);
+  }
+}

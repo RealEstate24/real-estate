@@ -1,0 +1,223 @@
+.security {
+  .container {
+    max-width: 99rem;
+  }
+
+  p.typography {
+    margin-top: 2.4rem;
+  }
+
+  &-list {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.8rem;
+    margin-top: 4.8rem;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      left: -10rem;
+      top: -3.5rem;
+      width: 26rem;
+      height: 22.2rem;
+      background-image: url("/media/background/leaves.png");
+    }
+
+    &::after {
+      right: -11.1rem;
+      bottom: 2rem;
+      width: 28rem;
+      height: 29.8rem;
+      background-image: url("/media/background/birds.png");
+    }
+
+    @media (max-width: em(767)) {
+      flex-direction: column;
+      gap: 4rem;
+    }
+  }
+
+  &-card {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    border-radius: 0.7rem;
+    padding: 1.6rem 4.4rem 4.4rem;
+    min-height: 54rem;
+    box-shadow: 0 1.2rem 3.6rem rgba(200, 203, 209, 0.12);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--clr-default-100);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1rem;
+      top: 1.6rem;
+      width: 9.3rem;
+      height: 5.9rem;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (max-width: em(576)) {
+        width: 5.6rem;
+        height: 3.5rem;
+      }
+    }
+
+    &.problems {
+      background-image: url("/media/background/problems.png");
+
+      &::before {
+        background-image: url("/media/ui/label-minus.svg");
+      }
+
+      .security-card__list li::before {
+        background-image: url("/media/icons/hexagon-info.svg");
+      }
+
+      @media (max-width: em(767)) {
+        min-height: 58rem;
+      }
+    }
+
+    &.guarantees {
+      background-image: url("/media/background/guarantees.png");
+
+      &::before {
+        background-image: url("/media/ui/label-plus.svg");
+      }
+
+      .security-card__list {
+        li {
+          &:nth-child(odd):last-child {
+            grid-column: 1 / 3;
+          }
+
+          &::before {
+            background-image: url("/media/icons/hexagon-success.svg");
+          }
+        }
+      }
+    }
+
+    > h3.typography {
+      margin-left: 4.8rem;
+      max-width: 40rem;
+
+      span {
+        display: inline-block;
+      }
+
+      @media (max-width: em(576)) {
+        margin-left: 4.2rem;
+      }
+    }
+
+    > p.typography {
+      margin-top: 3.6rem;
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 24.6rem;
+      font-size: 1.4rem;
+    }
+
+    > .button {
+      margin-top: 2.4rem;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.4rem;
+      margin-top: 4.8rem;
+
+      li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.7rem;
+        padding: 3.2rem 2.4rem 2.4rem;
+        min-height: 10rem;
+        text-align: center;
+        color: var(--clr-default-600);
+        background-color: var(--clr-primary-200);
+
+        .title {
+          font-size: 1.4rem;
+          line-height: 130%;
+
+          span {
+            font-family: "Alice", sans-serif;
+            font-size: 1.6rem;
+            color: var(--clr-default-800);
+          }
+        }
+
+        .description {
+          margin-top: 0.6rem;
+          font-size: 1.2rem;
+          line-height: 140%;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: -2.25rem;
+          width: 5.5rem;
+          height: 5.5rem;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          transform: translateX(-50%);
+
+          @media (max-width: em(992)) {
+            top: -1.8rem;
+            width: 3.6rem;
+            height: 3.6rem;
+          }
+        }
+
+        @media (max-width: em(992)) {
+          padding: 1.8rem 1rem 1rem;
+          min-height: 6.8rem;
+        }
+      }
+
+      @media (max-width: em(992)) {
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem;
+      }
+
+      @media (max-width: em(767)) {
+        margin-top: 3.2rem;
+      }
+    }
+
+    @media (max-width: em(767)) {
+      min-height: initial;
+    }
+
+    @media (max-width: em(576)) {
+      padding: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+// ФУНКЦИИ====================================================================
+@import "./settings/functions";
+
+// </ФУНКЦИИ>=================================================================
+
+// <Подключаем шрифты>========================================================
+@import "./settings/fonts";
+
+// </Подключаем шрифты>=======================================================
+
+// <ОБНУЛЕНИЕ>================================================================
+@import "./settings/normalize";
+
+// </ОБНУЛЕНИЕ>===============================================================
+
+// <ПЕРЕМЕННЫЕ>===============================================================
+$containerWidth: 124rem;
+
+:root {
+  // base
+  --font-family: "Gilroy", sans-serif;
+  --font-weight: 400;
+  --content-width: 121rem;
+  --container-offset: 1.5rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --transition: 0.3s;
+
+  --clr-default-100: #fff;
+  --clr-default-200: #fcfcfc;
+  --clr-default-400: #585e68;
+  --clr-default-600: #3d3a34;
+  --clr-default-800: #101012;
+
+  --clr-primary-200: #ffedbf;
+  --clr-primary-300: #eebb36;
+  --clr-primary-400: #cb9812;
+  --clr-secondary-400: #3b6eef;
+  --clr-secondary-600: #5a2b00;
+
+  --clr-status-error: #b72323;
+}
+
+// </ПЕРЕМЕННЫЕ>==============================================================
+
+// <ОБОЛОЧКИ>================================================================
+body {
+  font-size: 1.6rem;
+  color: var(--clr-default-400);
+  background-color: var(--clr-default-200);
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  width: 100%;
+  min-width: 32rem;
+  min-height: 100%;
+}
+
+// </ОБОЛОЧКИ>===============================================================
+
+// <СТИЛИ>===================================================================
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-offset);
+  padding-left: var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.padding {
+  &-large {
+    padding-top: 14rem;
+
+    @media (max-width: em(992)) {
+      padding-top: 8rem;
+    }
+  }
+}
+
+// Components - Libs
+@import "./libs/swiper.scss";
+// Components - Libs
+
+// Components - Form
+@import "./components/form/input.scss";
+// Components - Form
+
+// Components - UI
+@import "./components/ui/typography.scss";
+@import "./components/ui/button.scss";
+// Components - UI
+
+// Components - Common
+@import "./components/common/header.scss";
+@import "./components/common/footer.scss";
+// Components - Common
+
+// Components - Cards
+// Components - Cards
+
+// Components - Pages
+@import "./components/pages/home/home.scss";
+@import "./components/pages/home/advantages.scss";
+@import "./components/pages/home/offer.scss";
+@import "./components/pages/home/benefit.scss";
+@import "./components/pages/home/security.scss";
+@import "./components/pages/home/services.scss";
+// Components - Pages
+
+// Components - Libs
+// Components - Libs
+
+// </СТИЛИ>==================================================================
